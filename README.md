@@ -1,1 +1,1 @@
-# elegant-doc
+Elegant framework documentation, please check http://getelegant.com 

@@ -1,0 +1,1968 @@
+<div class="main-content main-content-doc">
+    <div class="main-content-inner content-width">
+        <div class="column-container">
+            <div class="column-three-qtr">
+                <div class="blog-post">
+                    <!-- Title -->
+                    <a name="config"></a>
+
+                    <h1>
+                        elegant-config
+                    </h1>
+
+                    <div class="blog-meta"></div>
+                    <div class="blog-content">
+                        <a name="config-desc"></a>
+
+                        <h2>
+                            Description
+                        </h2>
+
+                        <p class="note">
+                            this is the main elegant configuration object witch control how the elegant work.
+                        </p>
+
+                        <a name="config-prop"></a>
+
+                        <h2>
+                            Properties
+                        </h2>
+
+                        <div class="note">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>property</th>
+                                        <th>description</th>
+                                        <th>type</th>
+                                        <th>default</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="4"></td>
+                                    </tr>
+                                    <tr class="title">
+                                        <td colspan="4"><b>DIR</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>DIR.</b>CONTROLLERS</td>
+                                        <td>user controllers directory</td>
+                                        <td>string</td>
+                                        <td>app/controllers</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>DIR.</b>DEFAULT_THEME</td>
+                                        <td>the default theme directory inside the views directory</td>
+                                        <td>string</td>
+                                        <td>default</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>DIR.</b>INTERCEPTORS</td>
+                                        <td>user interceptors directory</td>
+                                        <td>string</td>
+                                        <td>app/interceptors</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>DIR.</b>PROJECT</td>
+                                        <td>Max file upload size in MB <br/>(less than or equal to POST_MAX_SIZE)</td>
+                                        <td>string</td>
+                                        <td>__dirname</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>DIR.</b>RESOURCES</td>
+                                        <td>the directory elegant use to store bundled static files</td>
+                                        <td>string</td>
+                                        <td>.resources</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>DIR.</b>SESSION</td>
+                                        <td>the directory elegant use to store session data</td>
+                                        <td>string</td>
+                                        <td>.session-data</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>DIR.</b>STATIC</td>
+                                        <td>user static files directory</td>
+                                        <td>string</td>
+                                        <td>app/static</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>DIR.</b>VIEWS</td>
+                                        <td>user views directory</td>
+                                        <td>string</td>
+                                        <td>app/views</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5"></td>
+                                    </tr>
+                                    <tr class="title">
+                                        <td colspan="4"><b>ERROR</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>ERROR.REDIRECT.</b>{ERROR_CODE}</td>
+                                        <td>redirect certain error code to this url, for example: ERROR.REDIRECT.404 = "/error/page-not-found"</td>
+                                        <td>string</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>ERROR.REDIRECT.</b>ALL</td>
+                                        <td>redirect all errors to this url, you can use
+                                            <b>{code}</b> as place holder to pass error
+                                            code to the url for example: /error/<b>{code}</b>, will redirect 404 error to
+                                            /error/<b>404</b></td>
+                                        <td>string</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5"></td>
+                                    </tr>
+                                    <tr class="title">
+                                        <td colspan="4"><b>MYSQL</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>MYSQL.</b>DATABASE</td>
+                                        <td>mysql connection database</td>
+                                        <td>string</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>MYSQL.</b>HOST</td>
+                                        <td>mysql connection host</td>
+                                        <td>string</td>
+                                        <td>localhost</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>MYSQL.</b>PASSWORD</td>
+                                        <td>mysql connection password</td>
+                                        <td>string</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>MYSQL.</b>USER</td>
+                                        <td>mysql connection user</td>
+                                        <td>string</td>
+                                        <td>root</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5"></td>
+                                    </tr>
+                                    <tr class="title">
+                                        <td colspan="4"><b>SERVER</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>SERVER.</b>PORT</td>
+                                        <td>Server listening port</td>
+                                        <td>integer</td>
+                                        <td>9090</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>SERVER.</b>POST_MAX_SIZE</td>
+                                        <td>Max post data size in MB</td>
+                                        <td>integer</td>
+                                        <td>40</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>SERVER.</b>UPLOAD_MAX_FILE_SIZE</td>
+                                        <td>Max file upload size in MB <br/>(less than or equal to POST_MAX_SIZE)</td>
+                                        <td>integer</td>
+                                        <td>40</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5"></td>
+                                    </tr>
+                                    <tr class="title">
+                                        <td colspan="4"><b>STATIC</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>STATIC.</b>CACHE_AGE</td>
+                                        <td>the time period in seconds during which the browser can use the cached resource without checking to see if a new version is available from the web server</td>
+                                        <td>int</td>
+                                        <td>645600</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>STATIC.</b>CACHE_HTML</td>
+                                        <td>wither to cache static html in memory or not (hard caching)</td>
+                                        <td>boolean</td>
+                                        <td>false</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>STATIC.</b>CACHE_RESOURCES</td>
+                                        <td>wither to cache static resources in memory or not (hard caching)</td>
+                                        <td>boolean</td>
+                                        <td>false</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>STATIC.</b>CHARSET</td>
+                                        <td>static files default charset</td>
+                                        <td>string</td>
+                                        <td>UTF-8</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>STATIC.</b>COMPACT_RESOURCES</td>
+                                        <td>wither to compact static resources as bundles or not</td>
+                                        <td>boolean</td>
+                                        <td>false</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>STATIC.</b>COMPRESS_HTML</td>
+                                        <td>wither to compress and minify html or not</td>
+                                        <td>boolean</td>
+                                        <td>false</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>STATIC.</b>COMPRESS_HTML_EXCEPTION</td>
+                                        <td>an array of urls that you want to exclude from compressing and minifying there html, for homepage use "/" and for other pages don't include trailing slash for example "user/login.html"</td>
+                                        <td>array</td>
+                                        <td>[]</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>STATIC.</b>COMPRESS_RESOURCES</td>
+                                        <td>wither to compress and minify static resources or not</td>
+                                        <td>boolean</td>
+                                        <td>false</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>STATIC.CONTENT_TYPE.</b>{EXTENSION}</td>
+                                        <td>default file header content type, for example STATIC.CONTENT_TYPE.PDF is application/pdf
+                                        </td>
+                                        <td>string</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <a name="config-app-config"></a>
+
+                        <h2>
+                            Your elegant app configuration
+                        </h2>
+
+                        <p>
+                            all elegant configuration is defined inside a node module called
+                            <b>elegant-config</b> where your
+                            elegant app read and write settings, the most common way to change your elegant app
+                            configuration is by going to
+                            <b>app/config.js</b> file and override this module default values, for example this
+                            is how your config.js file may look like:
+                        </p>
+                        <span data-lang="javascript">
+                            var config = require("elegant-config");
+
+                            // server
+                            config.SERVER.PORT = 9090;
+
+                            // database config
+                            config.MYSQL.HOST = "localhost";
+                            config.MYSQL.USER = "root";
+                            config.MYSQL.DATABASE = "getelegant";
+                            config.MYSQL.PASSWORD = "123";
+
+                            // compressing
+                            config.STATIC.COMPRESS_RESOURCES = true;
+                            config.STATIC.COMPRESS_HTML = true;
+                            config.STATIC.COMPRESS_HTML_EXCEPTION = ["about.html"];
+                            config.STATIC.DEFAULT_MEMORY_CACHE = true;
+                            config.STATIC.COMPACT_RESOURCES = true;
+                            config.STATIC.CACHE_RESOURCES = true;
+                            config.STATIC.CASH_HTML = true;
+                        </span>
+
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <!-- Title -->
+                    <a name="controller"></a>
+
+                    <h1>
+                        elegant-controller
+                    </h1>
+
+                    <div class="blog-meta"></div>
+
+                    <div class="blog-content">
+
+                        <a name="controller-desc"></a>
+
+                        <h2>
+                            Description
+                        </h2>
+
+                        <p class="note">
+                            this is the elegant controller class where you can create a new controller by instantiating it,
+                            the controller is the connector between the user request and your application logic.
+                        </p>
+
+                        <a name="controller-con"></a>
+
+                        <h2>
+                            Constructor
+                        </h2>
+
+                        <span data-lang="javascript">
+                            var Controller = require("elegant-controller");
+                            new Controller(path);
+                        </span>
+
+                        <a name="controller-prop"></a>
+
+                        <h2>
+                            Properties
+                        </h2>
+
+                        <div class="note">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>property</th>
+                                        <th>description</th>
+                                        <th>type</th>
+                                        <th>default</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>method</td>
+                                        <td>the request url method (type) that will trigger this controller callback, this property is set automatically when using the controller
+                                            <b>post</b> or <b>get</b> methods</td>
+                                        <td>string</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>path</td>
+                                        <td>the request url that will trigger this controller callback, this property value is relative to the application context and can be set directly in the constructor</td>
+                                        <td>string</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <a name="controller-dynamic-prop"></a>
+
+                        <h2>
+                            Dynamic properties
+                        </h2>
+
+                        <p>
+                            Dynamic properties are added to the controller at runtime by the elegant interceptors and can be accessed only using the
+                            <b>this</b> keyword.
+                        </p>
+
+                        <div class="note">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>property</th>
+                                        <th>description</th>
+                                        <th>type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="3"></td>
+                                    </tr>
+                                    <tr class="title">
+                                        <td colspan="3"><b>Added by elegant server</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>exception</td>
+                                        <td>the exception that may occur while executing the controller callback function, this property available only inside the error method callback function</td>
+                                        <td>object</td>
+                                    </tr>
+                                    <tr>
+                                        <td>response</td>
+                                        <td>the native nodejs server
+                                            <a href="http://nodejs.org/api/http.html#http_class_http_serverresponse" target="_blank">response</a></td>
+                                        <td>object</td>
+                                    </tr>
+                                    <tr>
+                                        <td>request</td>
+                                        <td>the native nodejs server
+                                            <a href="http://nodejs.org/api/http.html#http_http_incomingmessage" target="_blank">request</a></td>
+                                        <td>object</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"></td>
+                                    </tr>
+                                    <tr class="title">
+                                        <td colspan="3"><b>Added by request interceptor</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ARGS</td>
+                                        <td>an indexed array of the request url parts</td>
+                                        <td>array</td>
+                                    </tr>
+                                    <tr>
+                                        <td>EXTENSION</td>
+                                        <td>the request url extension for example ".html"</td>
+                                        <td>string</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GET</td>
+                                        <td>the request parameters sent to this controller using the get method</td>
+                                        <td>object</td>
+                                    </tr>
+                                    <tr>
+                                        <td>METHOD</td>
+                                        <td>the request method (type) wither its get or post</td>
+                                        <td>string</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PARAMS</td>
+                                        <td>the request parameters sent to this controller wither using post or get method</td>
+                                        <td>object</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PATH</td>
+                                        <td>the request url</td>
+                                        <td>object</td>
+                                    </tr>
+                                    <tr>
+                                        <td>POST</td>
+                                        <td>the request parameters sent to this controller using the post method</td>
+                                        <td>object</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"></td>
+                                    </tr>
+                                    <tr class="title">
+                                        <td colspan="3"><b>Added by session interceptor</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>SESSION</td>
+                                        <td>user session object with <b>set(key,value)</b> and
+                                            <b>get(key)</b> methods to store or get user session data</td>
+                                        <td>string</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"></td>
+                                    </tr>
+                                    <tr class="title">
+                                        <td colspan="3"><b>Added by resolver interceptor</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CONTROLLERS</td>
+                                        <td>all elegant controllers that match the request url, this controller selected from this array as the most suitable controller for this request</td>
+                                        <td>array</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <a name="controller-methods"></a>
+
+                        <h2>
+                            Methods
+                        </h2>
+
+                        <div class="note">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>method</th>
+                                        <th>description</th>
+                                        <th>definition</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>$</td>
+                                        <td>any function passed to this method will be added to a monitoring stack, after all monitor stack functions is completely done the controller
+                                            <b>ready</b> method callback will be called</td>
+                                        <td>$(callback)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>error</td>
+                                        <td>defining the controller callback function that will be triggered if any error occur while executing the controller callback function, if there is error and this method is not defined or doesn't return anything the elegant will automatically return a blank page with 500 response code (internal server error) </td>
+                                        <td>error(callback)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>get</td>
+                                        <td>defining the controller callback function that will be trigger using the request
+                                            <b>get</b> method</td>
+                                        <td>get(callback)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>post</td>
+                                        <td>defining the controller callback function that will be trigger using the request
+                                            <b>post</b> method</td>
+                                        <td>post(callback)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ready</td>
+                                        <td>defining the controller callback function that will be triggered after all the functions passed to the this.$ method is completely done</td>
+                                        <td>ready(callback)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <a name="controller-def"></a>
+
+                        <h2>
+                            Defining controllers
+                        </h2>
+
+                        <p>
+                            elegant controller has a callback function that consider as a connector between the request url and your application logic.
+                        </p>
+
+                        <p>
+                            when defining a new controller the most important controller properties are the path and the request method (type),
+                            these properties are the responsible about when to execute this controller callback function,
+                            the
+                            <b>path</b> property is the request url and can be set in the controller constructor, the
+                            <b>method</b> property can be defined using one of the controller methods such as
+                            <b>post</b> and
+                            the most common place for you to define your elegant app controllers is inside
+                            <b>app/controllers</b> directory where you can create any javascript file and defining your controller out there, like this:
+                        </p>
+
+
+                        <span data-lang="javascript">
+                            var Controller = require("elegant-controller");
+
+                            new Controller("/about-us").get(function () {
+                                // this function will be executed when the user request "/about-us" url
+                            });
+
+                            new Controller("/about-us").post(function () {
+                                // this function will be executed when the user post form data to the "/about-us" url
+                            });
+                        </span>
+
+                        <p>
+                            you can also use the following method to define your controller but we prefer the first method:
+                        </p>
+
+                        <span data-lang="javascript">
+                            var Controller = require("elegant-controller");
+
+                            var aboutUs = new Controller();
+                            aboutUs.path = "/contact-us";
+                            aboutUs.get(function(){
+                                // about-us controller code
+                            });
+                        </span>
+
+                        <a name="controller-return"></a>
+
+                        <h2>
+                            Returning result
+                        </h2>
+
+                        <p>
+                            elegant controller has different methods that accept callback function such as post/get/ready/error, inside these methods you can return result to the user using two different ways:<br/>
+                            1- using the native nodejs
+                            <a href="http://nodejs.org/api/http.html#http_class_http_serverresponse" target="_blank">response</a> object witch can be accessed via
+                            <b>this.response</b>, then you can use nodejs typical response methods such as this.response.write, this.response.writeHead, this.response.end etc..<br/>
+                            2- returning the result to elegant and the elegant will use something called
+                            <b>render interceptor</b> then this interceptor will handle everything for you including suitable response header, caching, compression, suitable response code and even redirects and file streaming.
+                        </p>
+
+                        <p>
+                            there is different data type that you can return to the elegant render interceptor witch will handle each one in a different way,
+                            here is a set of examples for most of these data types:
+                        </p>
+
+                        <p>1- returning <b>string</b> this is useful if you want to return json or raw text:</p>
+
+                        <span data-lang="javascript">
+                            var Controller = require("elegant-controller");
+
+                            new Controller("/example1").get(function () {
+                                return "hello world";
+                            });
+
+                            new Controller("/example2").get(function () {
+                                var product = {id:1,name:"my product",price:50,qty:60};
+                                return JSON.stringify(product);
+                            });
+                        </span>
+
+                        <p>2-returning
+                            <b>elegant-view</b> where you can use the elegant template engine to render your html page:
+                        </p>
+
+                        <span data-lang="javascript">
+                            var Controller = require("elegant-controller");
+                            var View = require("elegant-view");
+
+                            new Controller("/example1").get(function () {
+                                return new View('example1');
+                            });
+
+                            // passing variables to the view
+                            new Controller("/example2").get(function () {
+                                var vars = {}
+                                vars.user = {name:"jone",age:20}
+                                return new View('example2',vars);
+                            });
+                        </span>
+
+                        <p>
+                            then inside the
+                            <b>app/views/default</b> create example1.html and example2.html, and to print
+                            your example2.html variables:
+                        </p>
+
+                        {% raw %}
+                        <iframe data-lang="htmlmixed">
+                            <html>
+                                <head>
+                                    <title>Example 2</title>
+                                </head>
+                                <body>
+                                    <div>
+                                        <h1>{{user.name}} - {{user.age}}</h1>
+                                    </div>
+                                </body>
+                            </html>
+                        </iframe>
+                        {% endraw %}
+
+                        <p>
+                            3-returning
+                            <b>elegant-error</b> this is useful if you want to return an error code as response code:
+                        </p>
+
+                        <span data-lang="javascript">
+                            {% filter escape %}
+                            var Controller = require("elegant-controller");
+                            var Error = require("elegant-error");
+
+                            new Controller("/example1").get(function () {
+                                if (this.GET['id'] < 0){
+                                    return "hello world";
+                                }else{
+                                    return new Error(404);
+                                }
+                            });
+                            {% endfilter %}
+                        </span>
+
+                        <p>
+                            in this example if you try to visit /example1?id=-1 this will return 404 as response code
+                        </p>
+
+                        <p class="note">
+                            <b>Note:</b> check out the
+                            <a href="#error-redirect">elegant-error</a> documentation to learn how can you redirect all your app errors to custom urls
+                        </p>
+
+                        <p>
+                            4-returning
+                            <b>elegant-redirect</b> this is useful if you want to redirect the user to another page
+                        </p>
+
+                        <span data-lang="javascript">
+                            var Controller = require("elegant-controller");
+                            var Redirect = require("elegant-redirect");
+
+                            // redirect to /user/login
+                            new Controller("/example1").get(function () {
+                                return new Redirect('/user/login');
+                            });
+
+                            // redirect to /user/login with response code 301
+                            new Controller("/example2").get(function () {
+                                return new Redirect('/user/login',301);
+                            });
+
+                            // redirect to external page
+                            new Controller("/example2").get(function () {
+                                return new Redirect('http://google.com');
+                            });
+                        </span>
+
+                        <p>
+                            4-returning
+                            <b>elegant-file</b> this is useful if you want to manually return a file stream to the user without using the built-in static controller, note that the built-in static controller is using the same approach.
+                        </p>
+
+                        <span data-lang="javascript">
+                            var Controller = require("elegant-controller");
+                            var File = require("elegant-file");
+                            var config = require("elegant-config");
+
+                            // returning file to the user from the home directory
+                            new Controller("/example1").get(function () {
+                                return new File('/home/user/myfile.txt');
+                            });
+
+                            // returning file with content type 'plain/text' and force download
+                            new Controller("/example2").get(function () {
+                                return new File('/home/user/myfile.txt','text/plain',true);
+                            });
+
+                            // returning file from inside the project directory
+                            new Controller("/example3").get(function () {
+                                return new File(config.DIR.PROJECT + "/app/myfiles/myfile.txt");
+                            });
+                        </span>
+
+                        <p>
+                            4-returning
+                            <b>elegant-response-data</b> this is useful if you want to return custom response header and body taking the benefit of using the elegant render interceptor such as caching and compressions
+                        </p>
+
+                        <p>
+                            for example lets say you want to return a string with a custom header:
+                        </p>
+
+                        <span data-lang="javascript">
+                            var Controller = require("elegant-controller");
+                            var ResponseData = require("elegant-response-data");
+
+                            // returning hello world with a custom header
+                            new Controller("/example1").get(function () {
+                                var header = {
+                                    "Content-Type": "text/plain",
+                                    "Last-Modified": new Date().toUTCString()
+                                };
+                                var body = "hello world";
+                                return new ResponseData(body, header);
+                            });
+                        </span>
+
+                        <a name="controller-avoid"></a>
+
+                        <h2>
+                            How to avoid nested callbacks - using this.$ and ready
+                        </h2>
+
+                        <p>
+                            each controller has a built-in object called
+                            <b>elegant-sync</b> this object is responsible to dynamically manage independent asynchronous callbacks that may happened inside the controller callback function and let you know if these callbacks are done or not.
+                            for example lets say you want to asynchronously read two text files and return these file contents to the user:
+                        </p>
+
+                        <span data-lang="javascript">
+                            var Controller = require("elegant-controller");
+
+                            new Controller("/example1").get(function () {
+                                var content;
+                                var response = this.response;
+                                fs.readFile("/path/to/file1.txt", 'utf8', function (err, data) {
+                                    if(!err){
+                                        content = "------file1.txt--------\n"+data+"\n";
+                                    }else{
+                                        content = "an error occur while reading file1 \n";
+                                    }
+                                    fs.readFile("/path/to/file2.txt", 'utf8', function (err, data) {
+                                        if(!err){
+                                            content += "------file2.txt--------\n"+data+"\n";
+                                        }else{
+                                            content += "an error occur while reading file2 \n";
+                                        }
+                                        response.end(content);
+                                    });
+                                });
+                            });
+                        </span>
+
+                        <p>
+                            as you notice because we are using the asynchronous version of nodejs "readFile" we have to use nested functions way, so these two callbacks will work after each other,
+                            but as you notice the process of reading the two text files are independent so its wasting of time to wait until reading the whole first file to start reading the second file, so lets try another way to do this.
+                        </p>
+
+                        <p>
+                            each controller callback has a built-in method called
+                            <b>this.$</b>, passing any function to this method will gives you a lot of features, one of these features is adding this function to a monitoring stack and after the execution of all these functions is completely done the elegant will execute another controller method called
+                            <b>ready</b>,
+                            also the <b>this</b> keyword inside the function will point to the controller,
+                            using this way all these functions will be executed together and you will have better performance and beauty code, so using the second way:
+                        </p>
+
+                        <span data-lang="javascript">
+                            var Controller = require("elegant-controller");
+
+                            new Controller("/example1").get(function () {
+
+                                // reading the first file
+                                fs.readFile("/path/to/file1.txt", 'utf8', this.$(function (err, data) {
+                                    // here the "this" keyword is pointing to the controller
+                                    if(!err){
+                                        this.content1 = "------file1.txt--------\n"+data+"\n";
+                                    }else{
+                                        this.content1 = "an error occur while reading file1 \n";
+                                    }
+                                }));
+
+                                // reading the second file
+                                fs.readFile("/path/to/file2.txt", 'utf8', this.$(function (err, data) {
+                                    if(!err){
+                                        this.content2 = "------file2.txt--------\n"+data+"\n";
+                                    }else{
+                                        this.content2 = "an error occur while reading file2 \n";
+                                    }
+                                }));
+                                // notice that returning anything here will prevent calling the ready method
+                            }).ready(function(){
+                                // all functions passed to the this.$ is completely done
+                                var content = this.content1 + this.content2;
+                                return content; // elegant will do the rest
+                            });
+                        </span>
+
+                        <a name="controller-core"></a>
+
+                        <h2>
+                            Core elegant controllers
+                        </h2>
+
+                        <p>
+                            elegant core comes with a list of built-in controllers for common tasks used in most web applications, you can override these controllers only by
+                            defining a controller with the same url and method (get or post) and the elegant will dynamically override its core controller
+                            with the one you defined.
+                        </p>
+
+                        <p>
+                            this is a list of elegant core controllers:
+                        </p>
+
+                        <div class="note">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>controller</th>
+                                        <th>url</th>
+                                        <th>method</th>
+                                        <th>description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>index</td>
+                                        <td>/</td>
+                                        <td>get</td>
+                                        <td>elegant framework welcome page</td>
+                                    </tr>
+                                    <tr>
+                                        <td>redirect</td>
+                                        <td>/redirect</td>
+                                        <td>get</td>
+                                        <td>this controller accept two parameters "url" and "code" and will redirect the user to the given url and the given code as response header, this controller is working wither for both internal or external urls, if code is not given the default redirect code is 302</td>
+                                    </tr>
+                                    <tr>
+                                        <td>static</td>
+                                        <td>/static</td>
+                                        <td>get</td>
+                                        <td>this controller is responsible for streaming your public static files to the user from your app static directory "/app/static/", for example calling "/static/lib/jquery.js" will return the content of the file "/app/static/lib/jquery.js" to the user</td>
+                                    </tr>
+                                    <tr>
+                                        <td>resources</td>
+                                        <td>/resources</td>
+                                        <td>get</td>
+                                        <td>this controller is responsible for streaming, caching and compressing your static files as bundles, please check the
+                                            <a href="/start.html#managing-static">managing static resources</a> section in the getting started page to learn more about how to create static files bundles
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <!-- Title -->
+                    <a name="error"></a>
+
+                    <h1>elegant-error</h1>
+
+                    <div class="blog-meta"></div>
+                    <div class="blog-content">
+
+                        <a name="error-desc"></a>
+
+                        <h2>
+                            Description
+                        </h2>
+
+                        <p class="note">
+                            this is the elegant error class where you can create a new error by instantiating it, error is useful
+                            if you want to return an error response code to the user such as 404 or 500.
+                        </p>
+
+                        <a name="error-con"></a>
+
+                        <h2>
+                            Constructor
+                        </h2>
+
+                        <p data-lang="javascript">
+                            var Error = require("elegant-error");
+                            new Error(code);
+                        </p>
+
+                        <a name="error-prop"></a>
+
+                        <h2>
+                            Properties
+                        </h2>
+
+                        <div class="note">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>property</th>
+                                        <th>description</th>
+                                        <th>type</th>
+                                        <th>default</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>code</td>
+                                        <td>
+                                            the error response code you want to return to the user.
+                                        </td>
+                                        <td>int</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <a name="error-return"></a>
+
+                        <h2>
+                            Returning error
+                        </h2>
+
+                        <p>
+                            returning error is simply returning a response code to the user between 400 and 600,
+                            there is several ways to do this but using this class make your code more clear.
+                        </p>
+
+                        <p>
+                            so let say we have a page called "example1" that accept one
+                            parameter called "id" and if this parameter is less than 0 we want to return 404 (page not found)
+                            response code otherwise we want to return "hello world":
+                        </p>
+
+                        <span data-lang="javascript">
+                            {% filter escape %}
+                            var Controller = require("elegant-controller");
+                            var Error = require("elegant-error");
+
+                            new Controller("/example1").get(function () {
+                                if (this.GET['id'] < 0){
+                                    return "hello world";
+                                }else{
+                                    return new Error(404);
+                                }
+                            });
+                            {% endfilter %}
+                        </span>
+
+                        <a name="error-redirect"></a>
+
+                        <h2>
+                            Redirect errors to custom urls
+                        </h2>
+
+                        <p>
+                            Some websites redirecting all there errors to a custom pages with a beautiful design,
+                            so another benefit of using elegant error is that elegant can redirect all elegant errors
+                            to a custom page, to do this open your
+                            <b>/app/config.js</b> file and add this line anywhere out there:
+                        </p>
+
+                        <span data-lang="javascript">
+                            config.ERROR.REDIRECT["all"] = "/error/{code}";
+                        </span>
+
+                        <p>
+                            this will redirect all errors to the url
+                            <b>/error/{code}</b> where {code} is the response code, for example 404 error will be redirected
+                            to <b>/error/404</b>.
+                        </p>
+
+                        <p class="note">
+                            <b>Note:</b> to redirect a specific error code to a certain url use the error code instead of
+                            <b>all</b>, for example
+                            config.ERROR.REDIRECT["404"] = "/error/page-not-found";
+                        </p>
+
+
+                        <p>
+                            now inside <b>/app/controllers/</b> create a new file call it
+                            <b>error.js</b>, inside this file
+                            create the controller to display an error page to the user, for example:
+                        </p>
+
+
+                        <span data-lang="javascript">
+                            {% filter escape %}
+                            var Controller = require("elegant-controller");
+                            var View = require("elegant-view");
+
+                            new Controller("/error").get(function () {
+                                var code = this.ARGS[1];
+                                return new View('error',{code:code});
+                            });
+                            {% endfilter %}
+                        </span>
+
+                        <p>
+                            notice that we used the zero base array
+                            <b>this.ARGS</b> to get the second part of the request path.
+                        </p>
+
+                        <p>
+                            now you only need to create your errors html page, so inside
+                            <b>/app/views/</b> create a file call it
+                            <b>errors.html</b>, and inside this file insert your html, for example:
+                        </p>
+
+
+                        {% raw %}
+                        <iframe data-lang="htmlmixed">
+                            <html>
+                                <head>
+                                    <title>{{code}} Error</title>
+                                </head>
+                                <body>
+                                    <div>
+                                        <h1>{{code}} error</h1>
+
+                                        <p>
+                                            Whoa! What are you doing here?<br/>
+                                            You are not where you're supposed to be
+                                        </p>
+                                    </div>
+                                </body>
+                            </html>
+                        </iframe>
+                        {% endraw %}
+
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <!-- Title -->
+                    <a name="file"></a>
+
+                    <h1>
+                        elegant-file
+                    </h1>
+
+                    <div class="blog-meta"></div>
+                    <div class="blog-content">
+                        <a name="file-desc"></a>
+
+                        <h2>
+                            Description
+                        </h2>
+
+                        <p class="note">
+                            this is the elegant file class where you can create a new elegant file by instantiating it, elegant file is useful
+                            if you want to stream certain file from your machine to the user.
+                        </p>
+
+                        <a name="file-con"></a>
+
+                        <h2>
+                            Constructor
+                        </h2>
+
+                        <span data-lang="javascript">
+                            var File = require("elegant-file");
+                            new File(path, contentType, download, name);
+                        </span>
+
+                        <a name="file-prop"></a>
+
+                        <h2>
+                            Properties
+                        </h2>
+
+                        <div class="note">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>property</th>
+                                        <th>description</th>
+                                        <th>type</th>
+                                        <th>default</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>path</td>
+                                        <td>
+                                            the file system path to stream.
+                                        </td>
+                                        <td>string</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>contentType</td>
+                                        <td>
+                                            the content type for the file you want to stream, this will be added to the response header.
+                                        </td>
+                                        <td>string</td>
+                                        <td>text/plain</td>
+                                    </tr>
+                                    <tr>
+                                        <td>download</td>
+                                        <td>
+                                            if this value is set to true user browser will be forced to download the file instead of opening it.
+                                        </td>
+                                        <td>boolean</td>
+                                        <td>false</td>
+                                    </tr>
+                                    <tr>
+                                        <td>name</td>
+                                        <td>
+                                            the downloaded file name, if this value is not set the file name will be same as
+                                            the file system name.
+                                        </td>
+                                        <td>string</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <a name="file-return"></a>
+
+                        <h2>
+                            Returning file
+                        </h2>
+
+                        <p>
+                            returning file is reading a system file and writing it's buffer content to the response, when returning an elegant file
+                            you actually just telling the elegant to stream a file to the user with the information you specified
+                            then there is an elegant component called elegant render interceptor witch will do the rest for you.
+                        </p>
+
+                        <p class="note">
+                            <b>Note:</b> you don't have to use this component for your site static files because there is
+                            a core controller that handle this for you, for more information check out:
+                            <a href="#controller-core">elegant-controller</a> documentation
+                        </p>
+
+                        <p>
+                            for example if you want to return the content of the file
+                            <b>/home/root/myfiles/file1.txt</b>:
+                        </p>
+
+                        <span data-lang="javascript">
+                            var Controller = require("elegant-controller");
+                            var File = require("elegant-file");
+
+                            // returning file to the user from the home directory
+                            new Controller("/example1").get(function () {
+                                return new File('/home/root/myfiles/file1.txt');
+                            });
+                        </span>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <!-- Title -->
+                    <a name="interceptor"></a>
+
+                    <h1>
+                        elegant-interceptor
+                    </h1>
+
+                    <div class="blog-meta"></div>
+                    <div class="blog-content">
+
+                        <a name="interceptor-desc"></a>
+
+                        <h2>
+                            Description
+                        </h2>
+
+                        <p class="note">
+                            this is the elegant interceptor class where you can create a new elegant interceptor by instantiating it,
+                            every request in the system will pass through a stack of elegant interceptors,
+                            each interceptor handles a certain job and has its own weight to determinate when it will be executed,
+                            each interceptor can also export a variable to the next interceptor using the export method.
+                        </p>
+
+                        <a name="interceptor-con"></a>
+
+                        <h2>
+                            Constructor
+                        </h2>
+
+                        <span data-lang="javascript">
+                            var Interceptor = require("elegant-interceptor");
+                            new Interceptor(weight, id);
+                        </span>
+
+                        <a name="interceptor-prop"></a>
+
+                        <h2>
+                            Properties
+                        </h2>
+
+                        <div class="note">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>property</th>
+                                        <th>description</th>
+                                        <th>type</th>
+                                        <th>default</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>weight</td>
+                                        <td>
+                                            the interceptor weight witch determinate when it will be executed in the interceptors stack.
+                                        </td>
+                                        <td>int</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>id</td>
+                                        <td>
+                                            a unique name for the interceptor
+                                        </td>
+                                        <td>string</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <a name="interceptor-methods"></a>
+
+                        <h2>
+                            Methods
+                        </h2>
+
+                        <div class="note">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>method</th>
+                                        <th>description</th>
+                                        <th>definition</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>$</td>
+                                        <td>
+                                            any function passed to this method will be added to a monitoring stack, after all monitor stack functions is completely done the
+                                            interceptor <b>ready</b> method callback will be called
+                                        </td>
+                                        <td>$(callback)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>error</td>
+                                        <td>defining the interceptor callback function that will be triggered if any error occur while executing the interceptor callback function defined using the execute method.
+                                        <td>error(callback)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>execute</td>
+                                        <td>defining the interceptor callback function that will be trigger.</td>
+                                        <td>execute(callback)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>export</td>
+                                        <td>exporting variable to the next interceptor</td>
+                                        <td>export(callback)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ready</td>
+                                        <td>
+                                            defining the interceptor callback function that will be triggered after all the
+                                            functions passed to the this.$ method is completely done in the interceptor callback function defined
+                                            using the execute method.
+                                        </td>
+                                        <td>ready(callback)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <a name="interceptor-core"></a>
+
+                        <h2>
+                            Core elegant interceptors
+                        </h2>
+
+                        <p>
+                            elegant core comes with a list of built-in interceptors that handle the request life cycle,
+                        </p>
+
+                        <p>
+                            This image illustrates the elegant core interceptors stack witch explains the elegant
+                            request life cycle :
+                        </p>
+
+                        <p>
+                            This table explain each core interceptor and its job in the request life cycle:
+                        </p>
+
+                        <div class="note">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>interceptor</th>
+                                        <th>weight</th>
+                                        <th>description</th>
+                                        <th class="center" style="width: 50%;">
+                                            exported variables
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>request</td>
+                                        <td class="center">1</td>
+                                        <td>
+                                            this interceptor extract all the information needed from the request and
+                                            exporting it to the next interceptors.
+                                        </td>
+                                        <td>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="center">variable</th>
+                                                        <th>description</th>
+                                                        <th>type</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="width: 124px;" class="center">ARGS</td>
+                                                        <td>an indexed array of the request url parts</td>
+                                                        <td>array</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">EXTENSION</td>
+                                                        <td>the request url extension for example ".html"</td>
+                                                        <td>string</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">GET</td>
+                                                        <td>the request parameters sent to this interceptor using the get method</td>
+                                                        <td>object</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">METHOD</td>
+                                                        <td>the request method (type) wither its get or post</td>
+                                                        <td>string</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">PARAMS</td>
+                                                        <td>the request parameters sent to this interceptor wither using post or get method</td>
+                                                        <td>object</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">PATH</td>
+                                                        <td>the request url</td>
+                                                        <td>object</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">POST</td>
+                                                        <td>the request parameters sent to this interceptor using the post method</td>
+                                                        <td>object</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>session</td>
+                                        <td class="center">2</td>
+                                        <td>
+                                            this interceptor prepare request session and export it to the
+                                            next interceptors.
+                                        </td>
+                                        <td>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="center">variable</th>
+                                                        <th>description</th>
+                                                        <th>type</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="width: 124px;" class="center">SESSION</td>
+                                                        <td>user session object with <b>set(key,value)</b> and
+                                                            <b>get(key)</b> methods to store or get user session data</td>
+                                                        <td>string</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>resolver</td>
+                                        <td class="center">3</td>
+                                        <td>
+                                            this interceptor prepare all the controllers that applicable for this request
+                                            based on the request url.
+                                        </td>
+                                        <td>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="center">variable</th>
+                                                        <th>description</th>
+                                                        <th>type</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="width: 124px;" class="center">CONTROLLERS</td>
+                                                        <td>all elegant controllers that match the request url.</td>
+                                                        <td>array</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>router</td>
+                                        <td class="center">4</td>
+                                        <td>
+                                            this interceptor select the most suitable controller for this request and execute
+                                            it then export the result to the next interceptors.
+                                        </td>
+                                        <td>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="center">variable</th>
+                                                        <th>description</th>
+                                                        <th>type</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="width: 124px;" class="center">RESULT</td>
+                                                        <td>
+                                                            the data that results from executing the controller that suitable
+                                                            for this request.
+                                                        </td>
+                                                        <td>array</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>render</td>
+                                        <td class="center">5</td>
+                                        <td>
+                                            this interceptor is the responsible for rendering and writing the
+                                            controller result to the response including handling file streaming, redirects,
+                                            compressing, cashing and writing the applicable response headers.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <a name="interceptor-def"></a>
+
+                        <h2>
+                            Defining interceptor
+                        </h2>
+
+                        <p>
+                            As we mentioned before you need to create a new interceptor only if you want to change the
+                            request life cycle, you can inject your interceptor before or after another interceptor or replacing it,
+                            your interceptor weight is the responsible to determinate this.
+                        </p>
+                        <p class="note">
+                            <b>Note: </b> if any interceptor is added, removed or changed the application need to be restarted
+                            because the elegant framework is caching the interceptors stack.
+                        </p>
+
+                        <p>
+                            so for example lets say you want to create a new interceptor that's running after the core request
+                            interceptor so as we mentioned before the core request interceptor weight is 1 and
+                            the next core interceptor is the session interceptor witch has a weight of 2 so
+                            your interceptor weight could be 1.1, so in the
+                            <b>app/interceptors</b> directory create a new
+                            javascript file call it
+                            <b>test.js</b>, inside this file define your test interceptor as follow:
+                        </p>
+                        <span data-lang="javascript">
+                            var Interceptor = require("elegant-interceptor");
+
+                            new Interceptor(1.1, "test").execute(function () {
+                                console.log("this is my first interceptor");
+                            });
+                        </span>
+
+                        <p class="note">
+                            <b>Note: </b> each interceptor can export variables to the next interceptors, these exported
+                            variables is accessable using the <b>this</b> keyword.
+                        </p>
+
+                        <p>
+                            Now as you notice in each request your app will print "this is my first interceptor" in your terminal screen,
+                            also you can get all the variables that exported from the request interceptor using the
+                            <b>this</b> keyword,
+                            for example the request interceptor is exporting the "PATH" variable witch is the requested path,
+                            so change your interceptor to:
+                        </p>
+                        <span data-lang="javascript">
+                            var Interceptor = require("elegant-interceptor");
+
+                            new Interceptor(1.1, "test").execute(function () {
+                                console.log("this is the requested path: "+this.PATH);
+                            });
+                        </span>
+
+                        <p>
+                            Now as you notice your terminal will print the requested path.
+                        </p>
+
+                        <p class="note">
+                            <b>Note: </b> if you use <b>this.response.end()</b> inside your interceptor this will output
+                            the result to the user and any response data printed in the next interceptors will be ignored.
+                        </p>
+
+                        <p>
+                            If you used any non-blocking operation inside your interceptor you can use the this.$ and the ready method
+                            to sure that all your non-blocking operations are fully completed, so lets say you want to read
+                            a text file called "test.txt" using the non-blocking nodejs read file and print its content to the user if the requested path is "/test.html",
+                            so create a text file called "test.txt" beside your interceptor and write "hello world" inside it then
+                            change your interceptor as follow:
+                        </p>
+
+                        <p>
+                            <span data-lang="javascript">
+                                var fs = require("fs");
+                                var Interceptor = require("elegant-interceptor");
+                                var config = require("elegant-config");
+
+                                new Interceptor(1.1, "test").execute(function () {
+                                    this.vars = {}
+                                    fs.readFile(config.DIR.INTERCEPTORS + "/test.txt", {encoding: "UTF-8"}, this.$(function (err, data) {
+                                        this.vars.data = data;
+                                    }));
+                                }).ready(function () {
+                                        if (this.PATH == "test.html") {
+                                            this.response.end(this.vars.data);
+                                        }
+                                    });
+                            </span>
+                        </p>
+
+                        <a name="interceptor-export"></a>
+
+                        <h2>
+                            Exporting variables
+                        </h2>
+
+                        <p>
+                            Every interceptor in the system has its own scope, so to send data from any interceptor to another
+                            you have to export it using the interceptor <b>export</b> method and then the next interceptors can access it using
+                            the <b>this</b> keyword, so lets say we want to get the exported
+                            <b>PATH</b>, <b>ARGS</b> and <b>EXTENSION</b> variables from the core request interceptor and if
+                            the user requested the path <b>/hello-world</b> replacing them as if he requested the <b>/about.html</b>
+                            as some kind of url rewrite, so create a new interceptor call it <b>rewrite.js</b> as follow:
+                        </p>
+                        <p>
+                            <span data-lang="javascript">
+                            var Interceptor = require("elegant-interceptor");
+
+                            new Interceptor(1.2, "rewrite").execute(function () {
+                                if(this.PATH == "hello-world"){
+                                    var path = "about.html";
+                                    var args = path.split("/");
+                                    var extension = "html";
+                                    this.export("PATH",path);
+                                    this.export("ARGS",args);
+                                    this.export("EXTENSION",extension);
+                                }
+                            });
+                            </span>
+                        </p>
+                        <p>
+                            Now you can create a new controller for the about.html page as follow:
+                        </p>
+                        <p>
+                            <span data-lang="javascript">
+                                new Controller("/hello-world").get(function () {
+                                    return "the about page";
+                                });
+                            </span>
+                        </p>
+                        <p>
+                            notice that if you visit the page <b>/hello-world</b> its exactly as if you visit <b>/about.html</b>,
+                            because all the next interceptors are using your exported variables instead of the original one,
+                            so as you notice the elegant framework is very flexible.
+                        </p>
+                        <p class="note">
+                            <b>Note: </b> to replace any interceptor you need only to set your interceptor weight the same as the  this interceptor.
+                        </p>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <!-- Title -->
+                    <a name="redirect"></a>
+
+                    <h1>
+                        elegant-redirect
+                    </h1>
+
+                    <div class="blog-meta"></div>
+                    <div class="blog-content">
+
+                        <a name="redirect-desc"></a>
+
+                        <h2>
+                            Description
+                        </h2>
+
+                        <p class="note">
+                            this is the elegant redirect class where you can create a new elegant redirect by instantiating it, elegant redirect is useful
+                            if you want to redirect the user to another url.
+                        </p>
+
+                        <a name="redirect-con"></a>
+
+                        <h2>
+                            Constructor
+                        </h2>
+
+                        <span data-lang="javascript">
+                            var Redirect = require("elegant-redirect");
+                            new Redirect(url, code);
+                        </span>
+
+                        <a name="redirect-prop"></a>
+
+                        <h2>
+                            Properties
+                        </h2>
+
+                        <div class="note">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>property</th>
+                                        <th>description</th>
+                                        <th>type</th>
+                                        <th>default</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>url</td>
+                                        <td>
+                                            the url you want to send the user to, redirect url could be relative to your site or absolute.
+                                        </td>
+                                        <td>string</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>code</td>
+                                        <td>
+                                            the redirect code (type), this property is important for the SEO optimization, the most common redirect codes are 302 (temporary) and 301 (permanent).
+                                        </td>
+                                        <td>int</td>
+                                        <td>302 (temporary)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <a name="redirect-request"></a>
+
+                        <h2>
+                            Redirecting user request
+                        </h2>
+
+                        <p>
+                            Redirecting user request is simply returning a certain response header with specific response
+                            code to the browser telling it to redirect the user to another url then the user browser will do the rest, there is several ways to do this but using this
+                            class make your code more clear.
+                        </p>
+
+                        <p>
+                            for example if you want to redirect the user to the login page:
+                        </p>
+
+                        <span data-lang="javascript">
+                            var Controller = require("elegant-controller");
+                            var Redirect = require("elegant-redirect");
+
+                            // redirect to /user/login
+                            new Controller("/example1").get(function () {
+                                return new Redirect('/user/login');
+                            });
+                        </span>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <!-- Title -->
+                    <a name="response-data"></a>
+
+                    <h1>
+                        elegant-response-data
+                    </h1>
+
+                    <div class="blog-meta"></div>
+                    <div class="blog-content">
+
+                        <a name="response-data-desc"></a>
+
+                        <h2>
+                            Description
+                        </h2>
+
+                        <p class="note">
+                            this is the elegant response data class where you can create a new elegant response data by instantiating it, elegant response data is useful
+                            if you want to return custom response header and body taking the benefit of using the elegant render interceptor such as caching and compressions.
+                        </p>
+
+                        <a name="response-data-con"></a>
+
+                        <h2>
+                            Constructor
+                        </h2>
+
+                        <span data-lang="javascript">
+                            var ResponseData = require("elegant-response-data");
+                            new ResponseData(data, header);
+                        </span>
+
+                        <a name="response-data-prop"></a>
+
+                        <h2>
+                            Properties
+                        </h2>
+
+                        <div class="note">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>property</th>
+                                        <th>description</th>
+                                        <th>type</th>
+                                        <th>default</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>data</td>
+                                        <td>
+                                            the response data
+                                        </td>
+                                        <td>string/buffer</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>header</td>
+                                        <td>
+                                            the response header
+                                        </td>
+                                        <td>object</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <a name="response-data-return"></a>
+
+                        <h2>
+                            Returning response data
+                        </h2>
+
+                        <p>
+                            sometime you want to return a string or buffer as response data but with a custom response header,
+                            so instead of returning your string directly you can return an elegant-response-data object witch contains two
+                            things response body and response header,
+                            for example you want to change the response header content-type to 'text/json'.
+                        </p>
+
+                        <p>
+                            for example if you want to return json string with a custom header:
+                        </p>
+
+                        <span data-lang="javascript">
+                            var Controller = require("elegant-controller");
+                            var ResponseData = require("elegant-response-data");
+
+                            new Controller("/example1").get(function () {
+                                var product = {id:1,name:"my product",price:50,qty:60};
+                                var body = JSON.stringify(product);
+                                var header = {
+                                    "Content-Type": "text/json",
+                                    "Last-Modified": new Date().toUTCString()
+                                };
+
+                                return new ResponseData(body, header);
+                            });
+                        </span>
+                    </div>
+                </div>
+                <!--
+                <div class="blog-post">
+                    <a name="sync"></a>
+
+                    <h1>
+                        elegant-sync
+                    </h1>
+
+                    <div class="blog-meta"></div>
+                    <div class="blog-content">
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                -->
+                <div class="blog-post">
+                    <!-- Title -->
+                    <a name="view"></a>
+
+                    <h1>
+                        elegant-view
+                    </h1>
+
+                    <div class="blog-meta"></div>
+                    <div class="blog-content">
+                        <a name="view-desc"></a>
+
+                        <h2>
+                            Description
+                        </h2>
+
+                        <p class="note">
+                            this is the elegant view class where you can create a new elegant view by instantiating it, elegant view is useful
+                            if you want to return html page to the user.
+                        </p>
+
+                        <a name="view-con"></a>
+
+                        <h2>
+                            Constructor
+                        </h2>
+
+                        <span data-lang="javascript">
+                            var View = require("elegant-view");
+                            new View(suffix, vars, theme);
+                        </span>
+
+                        <a name="view-prop"></a>
+
+                        <h2>
+                            Properties
+                        </h2>
+
+                        <div class="note">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>property</th>
+                                        <th>description</th>
+                                        <th>type</th>
+                                        <th>default</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>suffix</td>
+                                        <td>
+                                            the name that will act as an identifier that the elegant template engine will use to build
+                                            your html template.
+                                        </td>
+                                        <td>string</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>vars</td>
+                                        <td>
+                                            an object contains all the variables that you want to pass to your html page.
+                                        </td>
+                                        <td>object</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>theme</td>
+                                        <td>
+                                            the theme name to use, elegant themes is usually placed inside
+                                            <b>/app/views</b>.
+                                        </td>
+                                        <td>string</td>
+                                        <td>default</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <a name="view-return"></a>
+
+                        <h2>
+                            Returning html page
+                        </h2>
+
+                        <p>
+                            to return html page all you have to do is returning a new elegant view in your controller callback function,
+                            the elegant view
+                            <b>suffix</b> property is very important because it's not only tells the elegant template engine
+                            what is your html page name its tell it how to build your html page from several html blocks called regions,
+                            to learn more about how to create html template check out the "<a href="/start.html#html-templating">Html Templating</a>" section in the getting started page.
+                        </p>
+
+                        <p>
+                            for example if you want to return a simple html page:
+                        </p>
+
+                        <span data-lang="javascript">
+                            var Controller = require("elegant-controller");
+                            var View = require("elegant-view");
+
+                            new Controller("/example1").get(function () {
+                                var user = {name:"jone",age:20}
+                                return new View('example1',{"user":user});
+                            });
+                        </span>
+
+                        <p>
+                            then inside the
+                            <b>app/views/default</b> create example1.html:
+                        </p>
+
+                        {% raw %}
+                        <iframe data-lang="htmlmixed">
+                            <html>
+                                <head>
+                                    <title>Example 1</title>
+                                </head>
+                                <body>
+                                    <div>
+                                        <h1>{{user.name}} - {{user.age}}</h1>
+                                    </div>
+                                </body>
+                            </html>
+                        </iframe>
+                        {% endraw %}
+
+                        <p class="note">
+                            <b>Note:</b> elegant template engine is built over
+                            <a href="http://paularmstrong.github.io/swig/" target="_blank">swig</a>, if you wont to learn more about swig syntax
+                            and features click
+                            <a href="http://paularmstrong.github.io/swig/" target="_blank">here</a> to visit swig documentation home page.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="column-one-fourth sidebar">
+                {% include sidebar %}
+            </div>
+        </div>
+    </div>
+</div>

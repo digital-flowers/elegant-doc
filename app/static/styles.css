@@ -1,0 +1,134 @@
+:focus {
+    outline: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.light-bg a:hover {
+    color: #342d47;
+}
+
+.dark-bg a:hover {
+    color: #ffffff;
+}
+
+.light-bg h1 a:hover, .light-bg h2 a:hover, .light-bg h3 a:hover, .light-bg h4 a:hover, .light-bg h5 a:hover, .light-bg h6 a:hover, .dark-bg h1 a:hover, .dark-bg h2 a:hover, .dark-bg h3 a:hover, .dark-bg h4 a:hover, .dark-bg h5 a:hover, .dark-bg h6 a:hover {
+    color: #871876;
+}
+a.button:hover, input[type="submit"]:hover {
+    background-position: 0 -60px;
+}
+a.button.accent:hover, input.accent[type="submit"]:hover {
+    color: #fff;
+}
+.topbar-outer.white .topsocial li i:hover {
+    color: #871876;
+}
+.topbar-outer.white .topnav li a:hover {
+    color: #871876;
+}
+
+.topbar-outer.white .topnav li a.drop:after {
+    color: #342d47;
+}
+
+.topbar-outer.white .topnav li a.drop.current:after {
+    color: #871876;
+}
+
+.topbar-outer.white .topnav li a.drop:hover:after {
+    color: #871876;
+}
+.topnav li:hover > ul {
+    display: block;
+}
+.topnav li > ul li a:hover {
+    opacity: 1;
+}
+.carousel-nav a:hover {
+    background-color: #871876;
+}
+.carousel-nav a:hover:after {
+    color: #ffffff;
+}
+.light-bg .footer-social li i:hover {
+    color: #871876;
+}
+.footer-newsletter input:focus {
+    outline: 0;
+}
+
+.light-bg .footer-newsletter .textbox:focus {
+    background-color: #ffffff !important;
+}
+.light-bg input[type="text"]:focus, .light-bg input[type="textarea"]:focus, .light-bg textarea:focus {
+    background-color: #eaeaea !important;
+}
+.light-bg .tabs li a.active:after {
+    background-color: #ffffff;
+}
+
+.mobilenav a:hover, .mobilenav a:hover:after {
+    color: #871876;
+}
+
+ul.topsocial li a:hover > .tooltip, ul.social li a:hover > .tooltip, ul.footer-social li a:hover > .tooltip, ul.post-sharing li a:hover > .tooltip {
+    opacity: 1;
+    display: block;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    -ms-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+.light-bg .accordion:hover {
+    background-color: #f6f6f6;
+}
+
+.light-bg .accordion.open {
+    background-color: #f6f6f6;
+}
+
+.tabs li a:hover {
+    background-color: #f1f1f1;
+}
+
+.tabs li a.active {
+    color: #342d47;
+    background-color: transparent;
+    position: relative;
+}
+
+.tabs li a.active:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+
+.alert span.close {
+    position: absolute;
+    right: 14px;
+    top: 17px;
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.light-bg .team .social i:hover {
+    color: #871876;
+}
+
+.light-bg .post-sharing a:hover i {
+    color: #871876;
+}
+
+.top-of-page-link:hover {
+    background-color: #871876;
+}

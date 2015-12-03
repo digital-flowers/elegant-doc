@@ -1,0 +1,29 @@
+<meta name="viewport" content="initial-scale=1">
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- Page Title -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<title>Elegant Framework - Nodejs</title>
+<meta name="description" content="Fastest Most elegant Web Framework Built Over NodeJs , Program in elegance"/>
+<link href="/static/favicon.png" rel="icon" type="image/x-icon" />
+
+{% if RESOURCES["base.js"].compact %}
+    <style type="text/css">
+        {{ RESOURCES["base.css"].content }}
+    </style>
+
+    <script type="text/javascript">
+        {{ RESOURCES["base.js"].content }}
+    </script>
+{% else %}
+    {% for bundel in RESOURCES %}
+        {% for file in bundel.files %}
+            {% if bundel.type == "css" %}
+                <link href="/static/{{ file }}" rel="stylesheet" />
+            {% elseif file != "base.js" %}
+                <script src="/static/{{ file }}" type="text/javascript"></script>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+

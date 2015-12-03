@@ -1,0 +1,240 @@
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- Main Content -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<div class="main-content">
+    <div class="main-content-inner content-width">
+        <div class="column-container">
+            <div class="column-three-qtr">
+                <div class="blog-post">
+                    <a name="why-elegant"></a>
+
+                    <h1>Why Elegant?</h1>
+
+                    <div class="blog-meta"></div>
+                    <div class="blog-content">
+                        <p>
+                            Everyone Knows that NodeJS Is Taking The Lead! taking
+                            Javascript to the server side development
+                            with its v8 javascript engine it is
+                            <a href="http://blog.appfog.com/node-js-is-taking-over-the-enterprise-whether-you-like-it-or-not/"
+                               target="_blank">taking over the Enterprise</a>.
+                            For the past two years NodeJS had huge growth and support from the open source community,
+                            currently in use by Microsoft, VMWare, Ebay, Yahoo, and many more top tech companies.
+                        </p>
+
+                        <p>
+                            Node.js uses an <a href="http://en.wikipedia.org/wiki/Event-driven_programming"
+                                               target="_blank">event-driven</a>,
+                            non-blocking I/O model that makes it lightweight and efficient, but this also make it very
+                            difficult to write and learn,
+                            and may lead the developers to write an ugly and hard to understand code specially what is
+                            known as callback hell,for example checkout these questions from the stackoverflow that most
+                            nodejs
+                            developers are
+                            facing:
+                        </p>
+
+                        <p>
+                            <a href="http://stackoverflow.com/questions/18095107/callback-hell-in-nodejs"
+                               target="_blank">
+                                - Callback hell in nodejs?
+                            </a>
+                            <br/>
+                            <a href="http://stackoverflow.com/questions/4234619/how-to-avoid-long-nesting-of-asynchronous-functions-in-node-js"
+                               target="_blank">
+                                - How to avoid long nesting of asynchronous functions in Node.js
+                            </a>
+                            <br/>
+                            <a href="http://stackoverflow.com/questions/18777342/event-driven-programming-non-linear-code"
+                               target="_blank">
+                                - Event Driven programming - non linear code
+                            </a>
+                        </p>
+
+                        <p>
+                            This is why elegant framework was built with a totally new concept that makes NodeJS code
+                            more friendly and easier for building web applications without losing the efficiency of
+                            event-driven and non-blocking I/O model.
+                        </p>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <a name="beautiful-node"></a>
+
+                    <h1>Beautiful NodeJs Code</h1>
+
+                    <div class="blog-meta"></div>
+                    <p>
+                        NodeJs is known for its ugly and hard to understand code for example to write a small code that
+                        uses a none-blocking operation that uses a multiple database queries and returns the result to
+                        the user
+                        as html , you
+                        have to write code such as:
+                    </p>
+
+                    <p>
+                        <span data-lang="javascript">
+                            var http = require('http');
+                            var fs = require('fs');
+                            var mysql      = require('mysql');
+                            var db = mysql.createConnection({
+                              host     : 'localhost',
+                              user     : 'user',
+                              password : 'password'
+                            });
+
+                            connection.connect();
+
+                            http.createServer(function (req, res) {
+                                 var uri = url.parse(request.url).pathname;
+                                 if (uri == "page.html"){
+                                    fs.readFile("page.html", 'utf-8', function (error, data) {
+                                        // query 1
+                                        db.select("query 1",function(err,data) {
+                                             // some code logic
+                                             // query 2
+                                             db.select("query2",function(err,data) {
+                                                // some code logic
+                                                // query 3
+                                                db.execute("query3", function(err,data) {
+                                                    // some code logic
+                                                    res.writeHead(200, {'Content-Type': 'text/plain'});
+                                                    res.write("some html with the results");
+                                                    res.end();
+                                                });
+                                            });
+                                        });
+                                    });
+                                 }else{
+                                    if(error) {
+                                        response.writeHead(404, {"Content-Type": "text/plain"});
+                                        response.write("404 Not Found\n");
+                                        response.end();
+                                        return;
+                                    }
+                                 }
+                            }).listen(8080);
+        </span>
+                    </p>
+
+                    <p>
+                        Now using Elegant Framework new concept you can write the previous code as bellow:
+                    </p>
+
+                    <p>
+                        <span data-lang="javascript">
+                        var View = require("elegant-view");
+                        var Error = require("elegant-error");
+                        var Controller = require("elegant-controller");
+                        var MySql = require("elegant-mysql");
+
+                        new Controller("/page.html").get(function () {
+                            this.vars = {};
+                            // query 1
+                            MySql.query("query 1",this.$(function (err, rows, fields) {
+                                // some code logic
+                                this.vars.data1 = rows;
+                            }));
+                            // query 2
+                            MySql.query("query 2",this.$(function (err, rows, fields) {
+                                // some code logic
+                                this.vars.data2 = rows;
+                            }));
+                            // query 3
+                            MySql.query("query 3",this.$(function (err, rows, fields) {
+                                // some code logic
+                                this.vars.data3 = rows;
+                            }));
+                        }).ready(function () {
+                            // this will pass your variables to a clean html page
+                            return new View('page',this.vars);
+                        }).error(function(){
+                            return new Error(404);
+                        });
+                    </span>
+                    </p>
+                </div>
+                <div class="blog-post">
+                    <a name="flexible-framework"></a>
+
+                    <h1>Flexible Framework</h1>
+
+                    <div class="blog-meta"></div>
+                    <div class="blog-content">
+                        <p>
+                            The core of elegant framework is build in a way that makes it easy to customize without any need
+                            from the developers to miss up with the core system. this core is built in a new concept called the
+                            interceptors
+                            stack, every request will pass through this stack , and this stack will handle the page life cycle ,
+                            each
+                            interceptor
+                            is a block of code that handles a certain job and has its own weight to determinate when it will be
+                            executed.
+
+                        </p>
+
+                        <p>
+                            The elegant interceptors stack is totally flexible , the Developer will have the ability to override any
+                            core interceptor
+                            or add a new one , that's why elegant framework is very flexible.
+
+                        </p>
+
+                        <p>
+                            This image illustrates the elegant core interceptors stack witch explains the elegant
+                            request life cycle :
+                        </p>
+
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <a name="ready-use"></a>
+
+                    <h1>Ready To Use</h1>
+
+                    <div class="blog-meta"></div>
+                    <div class="blog-content">
+                        <p>
+                            Elegant framework covers all the features needed for building web applications including:
+                            <br/>
+                            - database connection <br/>
+                            - session management <br/>
+                            - request routing system <br/>
+                            - error and redirect handling <br/>
+                            - powerful theme engine built over
+                            <a target="_blank" href="http://paularmstrong.github.io/swig/"> swig
+                                template engine</a><br/>
+                            - static files streaming and management <br/>
+                            - builtin html, css and javascript compressor and minifier<br/>
+                            - powerful caching system <br/>
+                            - covering all google page speed requirement
+                        </p>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <a name="whats-next"></a>
+
+                    <h1>What's Next ?</h1>
+
+                    <div class="blog-meta"></div>
+                    <div class="blog-content">
+                        <p>
+                            Currently we are working on supporting the following :<br/>
+                            - built in sockets managment system over
+                            <a target="_blank" href="http://socket.io">socket io</a>. <br/>
+                            - more database engines support , such as
+                            <a target="_blank" href="http://www.rethinkdb.com/">rethink db</a>
+                            and <a target="_blank" href="http://www.postgresql.org/">postgresql</a>.<br/>
+                            - elegant modules repository. <br/>
+                            - and more ....
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column-one-fourth sidebar">
+                {% include sidebar %}
+            </div>
+        </div>
+    </div>
+</div>
