@@ -4,7 +4,10 @@ var config = require("elegant-config");
 config.SERVER.PORT = 80;
 
 // database config
-
+config.MYSQL.HOST = "localhost";
+config.MYSQL.USER = "root";
+config.MYSQL.DATABASE = "database-name";
+config.MYSQL.PASSWORD = "password";
 
 // compressing
 config.STATIC.COMPRESS_RESOURCES = true;
