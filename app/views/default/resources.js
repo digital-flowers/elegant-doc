@@ -11,6 +11,9 @@ module.exports = {
     'base.js': {
         files: 'base.js'
     },
+    'analytics.js': {
+        files: 'analytics.js'
+    },
     'code-mirror.js': {
         files: ["code-mirror/lib/codemirror.js","code-mirror/addon/edit/matchbrackets.js","code-mirror/mode/shell/shell.js","code-mirror/mode/javascript/javascript.js","code-mirror/mode/css/css.js","code-mirror/mode/xml/xml.js","code-mirror/mode/htmlmixed/htmlmixed.js"]
     },
